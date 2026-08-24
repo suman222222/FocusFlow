@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FocusFlow | Task Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="app">
+
+    <header class="header">
+      <div>
+        <p class="eyebrow">PRODUCTIVITY DASHBOARD</p>
+        <h1>FocusFlow</h1>
+        <p class="subtitle">Plan clearly. Focus deeply. Finish what matters.</p>
+      </div>
+
+      <div class="date-card">
+        <span>Today</span>
+        <strong id="currentDate">Loading...</strong>
+      </div>
+    </header>
+
+    <section class="stats-grid">
+
+      <article class="stat-card">
+        <span class="stat-label">Total Tasks</span>
+        <strong id="totalTasks">0</strong>
+      </article>
+
+      <article class="stat-card">
+        <span class="stat-label">Active</span>
+        <strong id="activeTasks">0</strong>
+      </article>
+
+      <article class="stat-card">
+        <span class="stat-label">Completed</span>
+        <strong id="completedTasks">0</strong>
+      </article>
+
+    </section>
+
+    <section class="task-panel">
+
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">TASK MANAGEMENT</p>
+          <h2>Create a task</h2>
+        </div>
+      </div>
+
+      <form id="taskForm" class="task-form">
+
+        <input
+          type="text"
+          id="taskInput"
+          placeholder="What needs to be done?"
+          required
+        >
+
+        <select id="categoryInput">
+          <option value="Study">Study</option>
+          <option value="Work">Work</option>
+          <option value="Personal">Personal</option>
+        </select>
+
+        <select id="priorityInput">
+          <option value="Low">Low priority</option>
+          <option value="Medium" selected>Medium priority</option>
+          <option value="High">High priority</option>
+        </select>
+
+        <button type="submit">Add Task</button>
+
+      </form>
+
+    </section>
+
+    <section class="tasks-panel">
+
+      <div class="tasks-topbar">
+        <div>
+          <p class="eyebrow">YOUR WORK</p>
+          <h2>Tasks</h2>
+        </div>
+
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all" type="button">
+            All
+          </button>
+
+          <button class="filter-btn" data-filter="active" type="button">
+            Active
+          </button>
+
+          <button class="filter-btn" data-filter="completed" type="button">
+            Completed
+          </button>
+        </div>
+      </div>
+
+      <div id="taskList" class="task-list">
+        <p class="empty-state">No tasks yet. Add your first task above.</p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
